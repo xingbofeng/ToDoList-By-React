@@ -1,11 +1,16 @@
-# react-project
-
-基于react的todolist，并通过localStorage保存信息
-
-核心代码
-
-```javascript
-if (!localStorage.todolist) {
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="./build/react.js"></script>
+    <script src="./build/react-dom.js"></script>
+    <script src="./build/browser.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/app.css">
+  </head>
+  <body>
+    <div id="example" class="todoapp"></div>
+    <script type="text/babel">
+      if (!localStorage.todolist) {
         localStorage.todolist = JSON.stringify([]);
       }
       var arr = JSON.parse(localStorage.todolist);
@@ -90,4 +95,6 @@ if (!localStorage.todolist) {
         <ToDoList/>,
         document.getElementById('example')
       );
-```
+    </script>
+  </body>
+</html>
